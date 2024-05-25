@@ -2,7 +2,9 @@ import styles from './App.module.scss';
 import { ReactComponent as ArrowDownSvg } from './svg/arrow-down.svg';
 import { ReactComponent as AutomatorSvg } from './svg/automator.svg';
 import { ReactComponent as CashAppSvg } from './svg/cashapp.svg';
+import { ReactComponent as CheckmarkSvg } from './svg/checkmark.svg';
 import { ReactComponent as DiagramTextSvg } from './svg/diagram-text.svg';
+import { ReactComponent as DigramSvg } from './svg/diagram.svg';
 import { ReactComponent as DiscordSvg } from './svg/discord.svg';
 import { ReactComponent as DoordashSvg } from './svg/doordash.svg';
 import { ReactComponent as FigmaTextSvg } from './svg/figma-text.svg';
@@ -93,7 +95,7 @@ export default function App() {
                 </a>
               </p>
               <p className={styles.madebyWorkswith}>
-                Works with{' '}
+                Works with
                 <a href="/">
                   <FigmaTextSvg />
                 </a>
@@ -164,9 +166,7 @@ export default function App() {
                 and imagination as you design.
               </p>
             </hgroup>
-            <div>
-              <MagicSpellSvg />
-            </div>
+
             <ul className={styles.iconList}>
               <li>
                 <a href="#magic-icon">
@@ -190,10 +190,13 @@ export default function App() {
                 <a href="#">+ more</a>
               </li>
             </ul>
-            <picture>
+            <div className={styles.pictureTransparent}>
+              <MagicSpellSvg />
+            </div>
+            <picture className={styles.picturesMagicSpell}>
               <img id="#magic-icon" src="img/magic-icon.jpg" alt="magic.icon" />
-              <img id="#magic-copy" src="img/magic-copy.jpg" alt="magic-copy" />
-              <img id="#magic-img" src="img/magic-image.jpg" alt="magic-img" />
+              {/* <img id="#magic-copy" src="img/magic-copy.jpg" alt="magic-copy" />
+              <img id="#magic-img" src="img/magic-image.jpg" alt="magic-img" /> */}
             </picture>
           </div>
         </section>
@@ -201,28 +204,36 @@ export default function App() {
           <div className={styles.container}>
             <hgroup>
               <h1 className={styles.iconHeading}>
-                <DiagramTextSvg />
+                <DigramSvg />
                 Made by Diagramm
               </h1>
               <p>Be more creative with smarter design tools.</p>
             </hgroup>
-            <div>
-              <MultiColorSvg />
-              <h2>Automator</h2>
-              <p>There's an automation for that</p>
-              <a href="/">Learn more</a>
-              <AutomatorSvg />
-            </div>
+            <div className={styles.apps}>
+              <div className={styles.automator}>
+                <MultiColorSvg />
+                <h2>Automator</h2>
+                <p>There's an automation for that</p>
+                <a href="/">Learn more</a>
+                {/* <div className={styles.appPreview}>
+                  <AutomatorSvg />
+                </div> */}
+              </div>
+              <div className={styles.prototyper}>
+                <PrototyperIconSvg />
+                <h2>Prototyper</h2>
+                <p>Powerful prototyping with code</p>
+                <a href="/">Learn more</a>
+                {/* <div className={styles.appPreview}>
+                  <PrototyperSvg />
+                </div> */}
+              </div>
 
-            <div>
-              <PrototyperIconSvg />
-              <h2>Prototyper</h2>
-              <p>Powerful prototyping with code</p>
-              <a href="/">Learn more</a>
-              <PrototyperSvg />
+              <p className={styles.designers}>
+                Used by designers on these teams:
+              </p>
             </div>
-            <p>Used by designers on these teams:</p>
-            <ul>
+            <ul className={styles.designerIcons}>
               <li>
                 <TwitterSvg />
               </li>
@@ -256,26 +267,31 @@ export default function App() {
 
         <section className={styles.sectionPurple}>
           <div className={styles.container}>
-            <PricingSvg />
-            <h1 className={styles.iconHeading}>Pricing</h1>
-            <div>
-              <PublicbetaSvg />
-              <h3>Public beta</h3>
-              <p>Free</p>
-              <p>1 license, unlimited use.</p>
-              <ul>
-                <li>Early access</li>
-                <li>All magic spells</li>
-                <li>All future updates</li>
-              </ul>
+            <hgroup>
+              <PricingSvg />
+              <h1 className={styles.iconHeading}>Pricing</h1>
+            </hgroup>
+          </div>
+          <div className={styles.pricing}>
+            <PublicbetaSvg />
+            <h3>Public beta</h3>
+            <br />
+            <strong>Free</strong>
+            <p>1 license, unlimited use.</p>
+            <ul className={styles.pricingList}>
+              <li>Early access</li>
+              <li>All magic spells</li>
+              <li>All future updates</li>
+            </ul>
+            <button className={styles.buttonTry}>
               <a href="/">Try for free</a>
-            </div>
+            </button>
           </div>
         </section>
         <section>
           <div className={styles.container}>
             <hgroup>
-              <h1>Get Started with Magician</h1>
+              <h1 className={styles.iconHeading}>Get Started with Magician</h1>
               <p>A magical design tool for Figma powered by AI.</p>
               <a href="/">
                 <FigmaSvg />
