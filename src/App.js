@@ -31,6 +31,7 @@ import { ReactComponent as SnapchatSvg } from './svg/snapchat.svg';
 import { ReactComponent as SparklesSvg } from './svg/sparkles.svg';
 import { ReactComponent as SpellsSvg } from './svg/spells.svg';
 import { ReactComponent as TextBlockLeftSvg } from './svg/text-block-left.svg';
+import { ReactComponent as TextBlockSvg } from './svg/text-block.svg';
 import { ReactComponent as TwitterSvg } from './svg/twitter.svg';
 
 export default function App() {
@@ -41,7 +42,7 @@ export default function App() {
           <a href="/" className={styles.logo}>
             <LogoSvg />
             <h1>
-              Magican <span>beta</span>
+              Magician <span>beta</span>
             </h1>
           </a>
           <nav className={styles.navigation}>
@@ -125,7 +126,7 @@ export default function App() {
               </li>
               <li>
                 <a href="#copywriting">
-                  <TextBlockLeftSvg />
+                  <TextBlockSvg />
                   Copywriting
                 </a>
               </li>
@@ -228,44 +229,43 @@ export default function App() {
                   <PrototyperSvg />
                 </div> */}
               </div>
-
-              <p className={styles.designers}>
-                Used by designers on these teams:
-              </p>
+              <div className={styles.designers}>
+                <p>Used by designers on these teams:</p>
+              </div>
+              <ul className={styles.designerIcons}>
+                <li>
+                  <TwitterSvg />
+                </li>
+                <li>
+                  <NetflixSvg />
+                </li>
+                <li>
+                  <SnapchatSvg />
+                </li>
+                <li>
+                  <RobinhoodSvg />
+                </li>
+                <li>
+                  <MetaSvg />
+                </li>
+                <li>
+                  <DoordashSvg />
+                </li>
+                <li>
+                  <CashAppSvg />
+                </li>
+                <li>
+                  <InstacartSvg />
+                </li>
+                <li>
+                  <RedditSvg /> align-items: center;
+                </li>
+              </ul>
             </div>
-            <ul className={styles.designerIcons}>
-              <li>
-                <TwitterSvg />
-              </li>
-              <li>
-                <NetflixSvg />
-              </li>
-              <li>
-                <SnapchatSvg />
-              </li>
-              <li>
-                <RobinhoodSvg />
-              </li>
-              <li>
-                <MetaSvg />
-              </li>
-              <li>
-                <DoordashSvg />
-              </li>
-              <li>
-                <CashAppSvg />
-              </li>
-              <li>
-                <InstacartSvg />
-              </li>
-              <li>
-                <RedditSvg />
-              </li>
-            </ul>
           </div>
         </section>
 
-        <section className={styles.sectionPurple}>
+        <section className={styles.sectionPurplePricing}>
           <div className={styles.container}>
             <hgroup>
               <PricingSvg />
@@ -288,32 +288,42 @@ export default function App() {
             </button>
           </div>
         </section>
-        <section>
+        <section className={styles.sectionDarkpurple}>
           <div className={styles.container}>
             <hgroup>
               <h1 className={styles.iconHeading}>Get Started with Magician</h1>
               <p>A magical design tool for Figma powered by AI.</p>
-              <a href="/">
+              <a href="/" className={styles.buttonFancyPurple}>
                 <FigmaSvg />
                 Install on Figma
               </a>
-              <a href="/">
+              <a href="/" className={styles.joinDiscord}>
                 <DiscordSvg />
                 Join the Discord
               </a>
             </hgroup>
           </div>
-          <footer>
-            <hgroup>
-              <MagicianSvg />
+          <footer className={styles.header}>
+            <a href="/" className={styles.logo}>
+              <LogoSvg />
               <h1>Magician</h1>
-            </hgroup>
-            <p>Support</p>
-            <p>
-              <a href="/"></a>Contact
-            </p>
-            <p>Privacy</p>
-            <p>Terms</p>
+            </a>
+            <nav className={styles.navigation}>
+              <ul>
+                <li>
+                  <a href="/">Support</a>
+                </li>
+                <li>
+                  <a href="/">Contact</a>
+                </li>
+                <li>
+                  <a href="/">Privacy</a>
+                </li>
+                <li>
+                  <a href="/">Terms</a>
+                </li>
+              </ul>
+            </nav>
           </footer>
         </section>
       </main>

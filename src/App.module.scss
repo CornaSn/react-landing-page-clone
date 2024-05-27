@@ -13,6 +13,9 @@
   margin: 0 auto;
   align-items: center;
   padding: 4rem;
+  h1 {
+    font-size: 1rem;
+  }
 }
 
 .logo {
@@ -242,7 +245,8 @@
 
 .designerIcons {
   list-style-type: none;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: repeat(5, 2fr);
   gap: 10px;
   list-style-type: none;
@@ -256,7 +260,7 @@
   }
 }
 
-.sectionPurple {
+.sectionPurplePricing {
   composes: section;
   background-color: var(--purple);
   .pricing {
@@ -290,9 +294,6 @@
     font-size: 18px;
     font-weight: 600;
   }
-  li::before {
-    background-image: './svg/checkmark.svg';
-  }
 }
 
 .buttonTry {
@@ -300,4 +301,37 @@
   background-color: var(--purple);
   color: var(--white);
   border: none;
+}
+
+.sectionDarkpurple {
+  composes: section;
+  background: linear-gradient(to bottom, #160e20 0%, #301c4b 100%);
+  .joinDiscord {
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.buttonFancyPurple {
+  composes: button;
+  margin: 2rem auto;
+
+  background: var(--purple);
+  box-shadow:
+    inset 0px 2px 0px rgba(255, 255, 255, 0.16),
+    0 0 0 2px rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+
+  &:hover {
+    transform: rotate(0.7deg) scale(1.05);
+  }
+}
+
+.joinDiscord {
+  display: flex;
+  align-items: center;
+  margin-left: 40%;
+  margin-bottom: 20%;
+  opacity: 0.64;
 }
