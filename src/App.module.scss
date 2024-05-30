@@ -133,13 +133,18 @@
   align-items: center;
   justify-content: space-between;
   margin: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   gap: 1rem;
 
   a {
     opacity: 0.64;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    gap: 2rem;
+  }
+  svg {
+    margin-right: 0.5rem;
+    color: var(--grey);
   }
 }
 
@@ -157,15 +162,13 @@
       aspect-ratio: 16/9;
     }
   }
-  .picture {
-    position: absolute;
-  }
 }
 
 .iconHeading {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
+  align-items: center;
   svg {
     height: 3rem;
   }
@@ -173,10 +176,8 @@
 
 .apps {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
-
   h2 {
     font-weight: 700;
     font-size: 24px;
@@ -196,67 +197,51 @@
   }
   svg {
     margin: 1.2rem 0.3rem;
-    border-radius: var(--border-radius);
-    width: 30rem;
   }
-  .appPreview {
-    position: absolute;
-    border: 3px solid red;
-    margin-top: 11rem;
-    margin-left: 16rem;
-    overflow: hidden;
-    box-shadow:
-      0px 4px 8px rgb(0 0 0 / 24%),
-      0px 24px 40px rgb(0 0 0 / 24%);
-  }
+}
+
+.appContainer {
+  display: flex;
+  gap: 2rem;
 }
 
 .automator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 3rem 2rem 20rem 2rem;
-  background-color: var(--grey);
+  background-color: var(--white);
+  padding: 2rem;
+  width: 22rem;
+  height: 33rem;
   color: var(--black);
   border-radius: var(--border-radius);
-  width: 22rem;
 }
 
 .prototyper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 3rem 2rem 20rem 2rem;
-  background-color: #1a1a1a;
-  color: var(--white);
-  border-radius: var(--border-radius);
+  background-color: black;
+  padding: 2rem;
   width: 22rem;
+  height: 33rem;
+  border-radius: var(--border-radius);
 }
 
 .designers {
+  margin-top: 3rem;
   text-align: center;
-  border: 3px solid blue;
-  color: blue;
-  opacity: 1;
-  font-weight: 500;
 }
-
 .designerIcons {
   list-style-type: none;
   display: flex;
-  flex-direction: column;
-  grid-template-columns: repeat(5, 2fr);
-  gap: 10px;
-  list-style-type: none;
-  margin-top: 4rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
   font-size: 16px;
-  gap: 1rem;
+}
 
+.designerIcons svg {
+  text-align: center;
+  display: block;
   svg {
-    text-align: center;
-    display: inline;
+    height: 3rem;
   }
 }
 
@@ -264,18 +249,23 @@
   composes: section;
   background-color: var(--purple);
   .pricing {
+    display: flex;
+    flex-direction: column;
     text-align: left;
     background-color: var(--white);
-    width: 22rem;
+    width: 25rem;
+    height: 28rem;
     color: var(--black);
-    margin-top: 2rem;
+    margin-left: 25%;
+    margin-top: 3rem;
     padding: 2rem;
     border-radius: var(--border-radius);
   }
   h3 {
     color: var(--purple);
     font-size: 18px;
-    display: inline-flex;
+    position: absolute;
+    margin-left: 1.8rem;
   }
   strong {
     font-weight: 900;
@@ -290,17 +280,31 @@
 
   .pricingList {
     padding: 2rem;
-    line-height: 2.5rem;
-    font-size: 18px;
+    line-height: 2.8rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    list-style-type: none;
+  }
+  li:before {
+    content: '\2713' ' ';
+    font-size: 2rem;
+    margin-right: 0.7rem;
+    font-weight: 600;
+    color: var(--purple);
+    margin-left: -2rem;
   }
 }
 
 .buttonTry {
   composes: button;
   background-color: var(--purple);
+  position: absolute;
   color: var(--white);
   border: none;
+  padding: 0.8rem 8rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 21rem;
 }
 
 .sectionDarkpurple {
