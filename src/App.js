@@ -2,7 +2,6 @@ import styles from './App.module.scss';
 import { ReactComponent as ArrowDownSvg } from './svg/arrow-down.svg';
 import { ReactComponent as AutomatorSvg } from './svg/automator.svg';
 import { ReactComponent as CashAppSvg } from './svg/cashapp.svg';
-import { ReactComponent as CheckmarkSvg } from './svg/checkmark.svg';
 import { ReactComponent as DiagramTextSvg } from './svg/diagram-text.svg';
 import { ReactComponent as DigramSvg } from './svg/diagram.svg';
 import { ReactComponent as DiscordSvg } from './svg/discord.svg';
@@ -14,7 +13,6 @@ import { ReactComponent as HeartSvg } from './svg/heart.svg';
 import { ReactComponent as InstacartSvg } from './svg/instacart.svg';
 import { ReactComponent as LogoSvg } from './svg/logo.svg';
 import { ReactComponent as MagicImageSvg } from './svg/magic-image.svg';
-import { ReactComponent as MagicianSvg } from './svg/magician.svg';
 import { ReactComponent as MagicSpellSvg } from './svg/magicSpell.svg';
 import { ReactComponent as MetaSvg } from './svg/meta.svg';
 import { ReactComponent as MultiColorSvg } from './svg/multicolor.svg';
@@ -107,7 +105,7 @@ export default function App() {
 
         <section className={styles.sectionBlack}>
           <div className={styles.container}>
-            <hgroup className={styles.headerWithIcon}>
+            <hgroup>
               <h1 className={styles.iconHeading}>
                 <SpellsSvg />
                 Wave Your Magic Wand
@@ -119,7 +117,7 @@ export default function App() {
             </hgroup>
             <ul className={styles.iconList}>
               <li>
-                <a href="#">
+                <a>
                   <PencilSvg />
                   Text to Icon
                 </a>
@@ -137,7 +135,7 @@ export default function App() {
                 </a>
               </li>
               <li>
-                <a href="#">+ more</a>
+                <a>+ more</a>
               </li>
             </ul>
             <picture className={styles.picture}>
@@ -188,7 +186,7 @@ export default function App() {
                 </a>
               </li>
               <li>
-                <a href="#">+ more</a>
+                <a>+ more</a>
               </li>
             </ul>
             <div className={styles.pictureContainer}>
@@ -292,7 +290,7 @@ export default function App() {
                 <li>All future updates</li>
               </ul>
               <button className={styles.buttonTry}>
-                <a href="/">Try for free</a>
+                <div>Try for free</div>
               </button>
             </div>
           </div>
