@@ -191,20 +191,20 @@ export default function App() {
                 <a href="#">+ more</a>
               </li>
             </ul>
-            <div className={styles.pictureTransparent}>
-              <MagicSpellSvg />
-            </div>
-            <picture className={styles.picturesMagicSpell}>
+            <div className={styles.pictureContainer}>
+              <div className={styles.pictureTransparent}>
+                <MagicSpellSvg />
+              </div>
               <img
                 className={styles.picturesMagicSpellOne}
-                id="#magic-icon"
+                id="magic-icon"
                 src="img/magic-icon.jpg"
                 alt="magic.icon"
                 height="400rem"
               />
               {/* <img id="#magic-copy" src="img/magic-copy.jpg" alt="magic-copy" />
               <img id="#magic-img" src="img/magic-image.jpg" alt="magic-img" /> */}
-            </picture>
+            </div>
           </div>
         </section>
         <section className={styles.sectionBlack}>
@@ -224,11 +224,17 @@ export default function App() {
                   <p>There's an automation for that</p>
                   <a href="/">Learn more</a>
                 </div>
+                <div className={styles.appPreviewAutomator}>
+                  <AutomatorSvg />
+                </div>
                 <div className={styles.prototyper}>
                   <PrototyperIconSvg />
                   <h2>Prototyper</h2>
                   <p>Powerful prototyping with code</p>
                   <a href="/">Learn more</a>
+                </div>
+                <div className={styles.appPreviewPrototyper}>
+                  <PrototyperSvg />
                 </div>
               </div>
               <div className={styles.designers}>
@@ -327,6 +333,13 @@ export default function App() {
                 </li>
               </ul>
             </nav>
+            <img
+              className={styles.wizard}
+              id="wizard"
+              src="img/wizard@2x-min.png"
+              alt=""
+              height="400rem"
+            />
           </footer>
         </section>
       </main>
